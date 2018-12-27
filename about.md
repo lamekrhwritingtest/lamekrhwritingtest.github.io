@@ -3,7 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-# About
 I included the following supplemental information to help provide context for reviewers as they evaluate some of the decisions I made while working on this writing test.
 
 # My approach to this writing test
