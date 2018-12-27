@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: quickstart
+title: Getting Started with ownCloud
 ---
 # Overview
 - quickstart to get you up and running in owncloud.
