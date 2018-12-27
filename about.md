@@ -29,13 +29,15 @@ The bullets below capture the steps I followed while working through this writin
   * I added a theme, and tweaked a few things (logo, nav)
   * I finished by adding the my procedure to the site, and polishing up things like the copyright date and the theme colors.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+# Notes on the content I chose to include/exclude
+I made some de
+ownCloud runs on a number of different platforms
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+# Notes on additional accounts
+To complete this exercise, I set up additional Github and Gmail accounts.
 
+I set up an additional Github account for two reasons:
+I didn’t want to overwrite or add to my existing github pages site.
+On the off chance that anyone at my current company was checking out my GH account, I didn’t want to trigger any suspicions about interviewing.
 
-[jekyll-organization]: https://github.com/jekyll
+I set up an additional Gmail account to verify my Github account, but also so I could use the associated free GCP trial for my Ruby dev environment.
