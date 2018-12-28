@@ -5,9 +5,7 @@
 layout: quickstart
 title: Getting Started with ownCloud
 ---
-# Overview
-- quickstart to get you up and running in owncloud.
-- owncloud is an open source file sharing platform
+ownCloud is an open-source file sharing platform.  In this quickstart we walkthrough setting up an ownCloud server on Ubuntu 18.04, creating users, and connecting to the server.
 
 # Prereq
 - streamlined by using Ubuntu 18 and standard lamp server
