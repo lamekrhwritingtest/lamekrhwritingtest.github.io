@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: quickstart
 title: About
 permalink: /about/
 ---
@@ -37,7 +37,7 @@ ownCloud runs on a number of different platforms
 To complete this exercise, I set up additional Github and Gmail accounts.
 
 I set up an additional Github account for two reasons:
-I didn’t want to overwrite or add to my existing github pages site.
-On the off chance that anyone at my current company was checking out my GH account, I didn’t want to trigger any suspicions about interviewing.
+* I didn’t want to overwrite or add to my existing github pages site.
+* On the off chance that anyone at my current company was checking out my GH account, I didn’t want to trigger any suspicions about interviewing.
 
 I set up an additional Gmail account to verify my Github account, but also so I could use the associated free GCP trial for my Ruby dev environment.
