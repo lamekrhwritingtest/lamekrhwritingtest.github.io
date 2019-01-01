@@ -100,7 +100,7 @@ https://server_domain_or_IP:8080
 ```
 
 Create your admin user by entering a username and a password.
-img
+![Adding an admin username and password](/assets/owncloudqs-configure-username.png)
 
 Leave the **Data folder** field set to `/var/www/owncloud/data`.
 
