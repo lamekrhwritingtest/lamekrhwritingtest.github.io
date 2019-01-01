@@ -158,7 +158,7 @@ On the next page enter the new username and password you created.
 
 On the last page of the wizard you can select your folder syncing options. For this tutorial we will leave the default settings and click **Connect**.
 
-![Select your folder syncing options](/assets/owncloudqs-userconnect-foldersync.png)
+![Select your folder syncing options](/assets/owncloudqs-userconnect-foldersyncsettings.png)
 
 After connecting, the ownCloud client displays all of the servers you are connected to. You can view the status of your connections, edit the specific folders that are syncing, and create new connections to other ownCloud servers.
 
