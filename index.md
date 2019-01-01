@@ -37,7 +37,11 @@ apt-get update
 apt-get install owncloud-files
 ```
 
-Our ownCloud files installed to `/var/www/owncloud`. Depending on our web server configuration, we may need to adjust the document root to point to this directory. Navigate to `/etc/apache2/sites-enabled/` and open your `.conf` file. Inside this file we will make two changes.
+Our ownCloud files installed to `/var/www/owncloud`. Depending on our web server configuration, you may need to adjust the document root to point to this directory. Navigate to `/etc/apache2/sites-enabled/` and open your `.conf` file.
+> You might have more than one `.conf` file. In this case you can run the following command to show your parsed vhost settings, and pipe the output to grep to search for your server's domain or IP. This is most likely the case only if you're using an existing Apache setup, or a server that is for shared hosting.
+>```sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP```
+
+Inside your `.conf` file we will make two changes.
 
 First, change the `DocumentRoot` directive to point to `/var/www/owncloud`. For example, your updated file will look like this: 
 ```
