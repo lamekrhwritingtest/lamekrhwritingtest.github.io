@@ -10,7 +10,7 @@ ownCloud is an open-source file sharing platform. You host ownCloud on your own 
 In this quickstart we walk through setting up ownCloud Community Edition on Ubuntu 18.04, then we create a few users, and last we cover the steps to connect to your ownCloud server.
 
 # Prerequisites
-While ownCloud can be installed and run on a number of different operating systems, this quickstart specifically uses Ubuntu 18.04. If you're using a different operating system, use this quickstart for general guidance, or as a means to get a server up and running so you can explore the user interface and functionality.
+While ownCloud can be installed and run on a number of different operating systems, this quickstart specifically uses Ubuntu 18.04. If you are using a different operating system, use this quickstart for general guidance, or as a means to get a server up and running so you can explore the user interface and functionality.
 
 To complete the steps in this quickstart you will need to have the following:
 - An Ubuntu 18.04 server with a standard LAMP stack.
@@ -38,7 +38,7 @@ apt-get install owncloud-files
 ```
 
 Our ownCloud files installed to `/var/www/owncloud`. Depending on our web server configuration, you may need to adjust the document root to point to this directory. Navigate to `/etc/apache2/sites-enabled/` and open your `.conf` file.
-> You might have more than one `.conf` file. In this case you can run the following command to show your parsed vhost settings, and pipe the output to grep to search for your server's domain or IP. This is most likely the case only if you're using an existing Apache setup, or a server that is for shared hosting.
+> You might have more than one `.conf` file. In this case you can run the following command to show your parsed vhost settings, and pipe the output to grep to search for your server's domain or IP. This is most likely the case only if you are using an existing Apache setup, or a server that is for shared hosting.
 >```sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP```
 
 Inside your `.conf` file we will make two changes.
@@ -56,12 +56,12 @@ First, change the `DocumentRoot` directive to point to `/var/www/owncloud`. For 
 </VirtualHost>
 ```
 
-Second, change the default port from `80` to `8080` in the VirtualHost directive. Your updated file will look like this:
+Second, change the default port from `80` to `8080` in the VirtualHost directive. Your updated VirtualHost directive will look like this:
 ```
 <VirtualHost *:8080>
 ```
 
-Next, open your `/etc/apache2/ports.conf` and change the Listen directive to listen on port 8080. We're making this change to avoid any arbitrary restrictions our ISP may impose on the default port 80. Your updated file will look like this:
+Next, open your `/etc/apache2/ports.conf` and change the Listen directive to listen on port 8080. We are making this change to avoid any arbitrary restrictions our ISP may impose on the default port 80. Your updated Listen directive will look like this:
 ```
 Listen 8080
 ```
@@ -76,7 +76,7 @@ This completes the ownCloud installation.
 # Configure a MySQL Database
 Next we will set up a MySQL database with the information we need to provide when configuring our new ownCloud instance.
 
-Start by creating a new database. You can name this database anything you'd like. In our example, we are naming our database `owncloud`.
+Start by creating a new database. You can name this database anything you would like. In our example, we are naming our database `owncloud`.
 ```sql
 CREATE DATABASE owncloud;
 ```
@@ -93,13 +93,13 @@ Last, activte your changes.
 FLUSH PRIVILEGES;
 ```
 
-Now your database is setup and you're ready to configure your ownCloud instance.
+Now your database is setup and you are ready to configure your ownCloud instance.
 
 # Configure ownCloud
 When you first install ownCloud you need to complete some initial configuration steps.
 
 First, navigate to your server from a browser.
-> Be sure to replace `server_domain_or_IP` with your actual server domain or IP. Note that we've included `:8080` to reflect the changes we made to our Apache server to listen on port 8080.
+> Be sure to replace `server_domain_or_IP` with your actual server domain or IP. Note that we have included `:8080` to reflect the changes we made to our Apache server to listen on port 8080.
 
 ```
 https://server_domain_or_IP:8080
@@ -122,7 +122,7 @@ Enter the details of the MySQL database we configured in the previous section. U
 Click the **Finish setup** button to complete your configuration.
 
 # Add a user account
-Now that our ownCloud server is configured, let's create a user.
+Now that our ownCloud server is configured, the next step is to create a user.
 
 Navigate to your server in a browser, and log in as an admin.
 
@@ -142,7 +142,7 @@ Now your new user is ready to connect and share files on your ownCloud server.
 
 
 # Connect with a user account
-ownCloud provides a number of clients to connect to ownCloud servers. In this example we'll connect to our new ownCloud server using the MacOS desktop client.
+ownCloud provides a number of clients to connect to ownCloud servers. In this example we will connect to our new ownCloud server using the MacOS desktop client.
 
 Download and install the client from [ownCloud's download page](https://owncloud.org/download/).
 
@@ -154,7 +154,7 @@ On the next page enter the new username and password you created.
 
 ![Enter your username and password](/assets/owncloudqs-userconnect-userlogin.png)
 
-On the last page of the wizard you can select your folder syncing options. For this tutorial we'll leave the default settings and click **Connect**.
+On the last page of the wizard you can select your folder syncing options. For this tutorial we will leave the default settings and click **Connect**.
 
 ![Select your folder syncing options](/assets/owncloudqs-userconnect-foldersync.png)
 
@@ -162,7 +162,7 @@ After connecting, the ownCloud client displays all of the servers you are connec
 
 ![View your connected servers](/assets/owncloudqs-userconnect-connectedservers.png)
 
-Test out your server by creating a new test file on your desktop. Be sure to create the file in the folder you're syncing to your ownCloud server.
+Test out your server by creating a new test file on your desktop. Be sure to create the file in the folder you are syncing to your ownCloud server.
 
 After creating the file, log into your server from your browser and view the file appear on the **File** tab. 
 
