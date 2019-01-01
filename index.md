@@ -166,7 +166,7 @@ After connecting, the ownCloud client displays all of the servers you are connec
 
 Test out your server by creating a new test file on your desktop. Be sure to create the file in the folder you are syncing to your ownCloud server.
 
-After creating the file, log in to your server from your browser and view the file appear on the **File** tab. 
+After creating the file, log in to your server from your browser and view your file on the **Files** tab.
 
 ![Test syncing a file](/assets/owncloudqs-userconnect-testfile.png)
 

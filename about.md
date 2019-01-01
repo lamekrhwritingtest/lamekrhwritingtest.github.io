@@ -20,14 +20,14 @@ The bullets below capture the steps I followed while working through this writin
     * This worked for me the first time. I had some trouble connecting to the site using the desktop client, but resolved the issue by changing the user’s password immediately after creation.
 * Write the procedure
   * I used my notes from my research and testing, and drafted the procedure in Google Docs
-  * Brush up on Jekyll
+* Brush up on Jekyll
   * Read through the Jekyll docs
   * Practiced the Jekyll quickstart
     * To accomplish this I had to set up a Ruby dev environment. This involved a number of false starts. I was unable to get Jekyll to install on my laptop (some issue with commonmark I could not resolve). After 2 failed attempts, I decided to spin up a Ruby dev environment using pre-baked instances on Google Cloud Platform.
 * Set up my Github Pages / Jekyll site
   * I started by following the Jekyll quickstart
   * I added a theme, and tweaked a few things (logo, nav)
-  * I finished by adding the my procedure to the site, and polishing up things like the copyright date and the theme colors.
+  * I finished by adding my procedure to the site, and polishing up things like the copyright date and the theme colors.
 
 # Notes on the content I chose to include/exclude
 ownCloud runs on a number of different platforms, but documenting them all was outside the scope of this exercse. As well, the exercise prompts covered different types of usage (administration tasks and user tasks). Because of this, I decided to focuse on one specific OS (Ubuntu 18.04).
