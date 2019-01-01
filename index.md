@@ -26,7 +26,7 @@ First, add the ownCloud repository key to `apt`.
 wget -nv https://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key -O Release.key
 apt-key add - < Release.key
 ```
->If you experience difficulty with any of the commands referenced in this step, check the [ownCloud download page](http://download.owncloud.org/download/repositories/10.0/owncloud/) for the most up to date information.
+>If you experience difficulty with any of the commands referenced in this section, check the [ownCloud download page](http://download.owncloud.org/download/repositories/10.0/owncloud/) for the most up to date information.
 
 Next, run the following shell commands as root. This adds the repository, then installs ownCloud.
 ```bash
@@ -67,7 +67,7 @@ sudo systemctl reload apache2
 
 This completes the ownCloud installation.
 
-# Configure the MySQL Database
+# Configure a MySQL Database
 Next we will setup a MySQL database with the information we need to provide when configuring our new ownCloud instance.
 
 Start by creating a new database. You can name this database anything you'd like. In our example, we are naming our database `owncloud`.
@@ -90,9 +90,9 @@ FLUSH PRIVILEGES;
 Now your database is setup and you're ready to configure your ownCloud instance.
 
 # Configure ownCloud
-When you first install ownCloud you need to take some initial configuration steps.
+When you first install ownCloud you need to complete some initial configuration steps.
 
-First, navigate to your server from your browser.
+First, navigate to your server from a browser.
 > Be sure to replace `server_domain_or_IP` with your actual server domain or IP. Note that we've included `:8080` to reflect the changes we made to our Apache server to listen on port 8080.
 
 ```
@@ -109,7 +109,7 @@ Leave the **Data folder** field set to `/var/www/owncloud/data`.
 
 ![Leave the data folder setting as-is](/assets/owncloudqs-configure-datafolder.png)
 
-Enter the details of the MySQL database we configured in the previous section. Use the database name and username you created. Leave the database host as `localhost`.
+Enter the details of the MySQL database we configured in the previous section. Use the database name, and the database user and password you created. Leave the database host as `localhost`.
 
 ![Adding database information](/assets/owncloudqs-configure-databaseinfo.png)
 
@@ -120,7 +120,7 @@ Now that our ownCloud server is configured, let's create a user.
 
 Navigate to your server in a browser, and login as an admin.
 
-Click the hamburger menu and select **Users**.
+Click on your username in the top right corner, and from the dropdown select **Users**.
 
 ![Navigate to the users tab](/assets/owncloudqs-usercreate-userstab.png)
 
@@ -132,7 +132,7 @@ A new user is generated. Click into the *Password* field for your new user, and 
 
 ![Enter a new username and password](/assets/owncloudqs-usercreate-updatepassword.png)
 
-Now your new user it ready to connect and share files on your ownCloud server. 
+Now your new user is ready to connect and share files on your ownCloud server. 
 
 
 # Connect with a user account
@@ -144,7 +144,7 @@ Open the desktop client and enter your server domain or IP.
 
 ![Enter your server address](/assets/owncloudqs-userconnect-serveraddress.png)
 
-On the next page enter the new username and password you created in the previous section.
+On the next page enter the new username and password you created.
 
 ![Enter your username and password](/assets/owncloudqs-userconnect-userlogin.png)
 
@@ -152,15 +152,15 @@ On the last page of the wizard you can set up your folder syncing options. For t
 
 ![Select your folder syncing options](/assets/owncloudqs-userconnect-foldersync.png)
 
-After connecting, the ownCloud client displays all of the servers you are connected to. You can view the status of your connections, edit
+After connecting, the ownCloud client displays all of the servers you are connected to. You can view the status of your connections, edit the specific folders that are syncing, and create new connections to other ownCloud servers.
 
 ![View your connected servers](/assets/owncloudqs-userconnect-connectedservers.png)
 
-Test out your server by creating a new test file on your desktop in the folder you're syncing.
+Test out your server by creating a new test file on your desktop. Be sure to create the file in the folder you're syncing to your ownCloud server.
+
+After creating the file, log into your server from your browser, and notice the file appear on the **File** tab. 
 
 ![Test syncing a file](/assets/owncloudqs-userconnect-testfile.png)
-
-After creating the file, you can log into your server from your browser, and notice the file appear on the **File** tab. 
 
 # Conclusion
 This tutorial walked you through setting up an ownCloud instance, creating users, and connecting. From here you should feel comfortable with the basics of ownCloud, and be ready to set up your own instance to manage your data.
