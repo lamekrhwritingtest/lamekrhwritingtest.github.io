@@ -55,7 +55,7 @@ Second, change the default port from `80` to `8080` in the VirtualHost directive
 <VirtualHost *:8080>
 ```
 
-Next, open your `/etc/apache2/ports.conf` and change the Listen directove to listen on port 8080. We're making this change to avoid any arbitrary restrictions our ISP may impose on the default port 80. Your updated file will look like this:
+Next, open your `/etc/apache2/ports.conf` and change the Listen directive to listen on port 8080. We're making this change to avoid any arbitrary restrictions our ISP may impose on the default port 80. Your updated file will look like this:
 ```
 Listen 8080
 ```
@@ -107,30 +107,62 @@ Create your admin user by entering a username and a password.
 
 Leave the **Data folder** field set to `/var/www/owncloud/data`.
 
-Enter the details of the MySQL database we configured in the previous section. Use the database name and username you created. Leave the database host as `localhost`.
-
 ![Leave the data folder setting as-is](/assets/owncloudqs-configure-datafolder.png)
 
-Fill out the details of the database name, database username, and database password you created in the previous section. If you used the settings from this guide, both the database name and username will be owncloud. Leave the database host as localhost.
+Enter the details of the MySQL database we configured in the previous section. Use the database name and username you created. Leave the database host as `localhost`.
 
 ![Adding database information](/assets/owncloudqs-configure-databaseinfo.png)
 
 Click the **Finish setup** button to complete your configuration.
 
 # Add a user account
+Now that our ownCloud server is configured, let's create a user.
 
+Navigate to your server in a browser, and login as an admin.
 
-- log in to the web UI as an admin
-- click hamburger menu, select users
-- fill in the user info (note about using a new, non-admin group.)
-- reset password (This is what I need to double check. With the current default workflow, I don't know where to set the pass, and if it is set, I don't know what it is set to.)
+Click the hamburger menu and select **Users**.
+
+![Navigate to the users tab](/assets/owncloudqs-usercreate-userstab.png)
+
+Enter a username and user email, then click **Create**.
+
+![Enter a new username and password](/assets/owncloudqs-usercreate-newuserinfo.png)
+
+A new user is generated. Click into the *Password* field for your new user, and update the password.
+
+![Enter a new username and password](/assets/owncloudqs-usercreate-updatepassword.png)
+
+Now your new user it ready to connect and share files on your ownCloud server. 
+
 
 # Connect with a user account
-- number of options, we show using the Mac OSX client
-- open desktop client
-- enter server address (what if I already entered a server, and I want to add another or change?)
-- enter username and pass, then click conect
+ownCloud provides a number of clients to connect to ownCloud servers. In this example we'll connect to our new ownCloud server using the MacOS desktop client.
+
+Download and install the client from [ownCloud's download page](https://owncloud.org/download/).
+
+Open the desktop client and enter your server domain or IP.
+
+![Enter your server address](/assets/owncloudqs-userconnect-serveraddress.png)
+
+On the next page enter the new username and password you created in the previous section.
+
+![Enter your username and password](/assets/owncloudqs-userconnect-userlogin.png)
+
+On the last page of the wizard you can set up your folder syncing options. For this tutorial we'll leave the default settings and click **Connect**.
+
+![Select your folder syncing options](/assets/owncloudqs-userconnect-foldersync.png)
+
+After connecting, the ownCloud client displays all of the servers you are connected to. You can view the status of your connections, edit
+
+![View your connected servers](/assets/owncloudqs-userconnect-connectedservers.png)
+
+Test out your server by creating a new test file on your desktop in the folder you're syncing.
+
+![Test syncing a file](/assets/owncloudqs-userconnect-testfile.png)
+
+After creating the file, you can log into your server from your browser, and notice the file appear on the **File** tab. 
 
 # Conclusion
-Gets you up and running
+This tutorial walked you through setting up an ownCloud instance, creating users, and connecting. From here you should feel comfortable with the basics of ownCloud, and be ready to set up your own instance to manage your data.
 
+Check out [ownCloud's documentation](https://owncloud.org/community/documentation/) for more information.
