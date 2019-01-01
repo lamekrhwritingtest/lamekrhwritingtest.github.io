@@ -7,16 +7,18 @@ title: Getting Started with ownCloud
 ---
 ownCloud is an open-source file sharing platform. You host ownCloud on your own private server or private cloud, giving you full control of your data. ownCloud allows you to sync and store your data, and access it from all of your devices.
 
-In this quickstart we walk through setting up ownCloud Community Edition or Ubuntu 18.04, then we create a few users, and last we cover the steps to connect to your ownCloud server.
+In this quickstart we walk through setting up ownCloud Community Edition on Ubuntu 18.04, then we create a few users, and last we cover the steps to connect to your ownCloud server.
 
 # Prerequisites
 While ownCloud can be installed and run on a number of different operating systems, this quickstart specifically uses Ubuntu 18.04. If you're using a different operating system, use this quickstart for general guidance, or as a means to get a server up and running so you can explore the user interface and functionality.
 
 To complete the steps in this quickstart you will need to have the following:
+- An Ubuntu 18.04 server with a standard LAMP stack.
 - A user with sudo privileges on your server.
-- A standard LAMP stack.
 
-Once you have completed the prerequisites, read on to get started installing ownCloud.
+Once you have completed these prerequisites, read on to get started installing ownCloud.
+
+>If you need help with either of these steps, there are [a number of resouces on the internet](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04) that can help guide you.
 
 # Install ownCloud
 To install ownCloud on Ubuntu 18.04 we will use the `apt` package manager. 
