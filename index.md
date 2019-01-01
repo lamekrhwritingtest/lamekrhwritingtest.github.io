@@ -5,13 +5,12 @@
 layout: quickstart
 title: Getting Started with ownCloud
 ---
-ownCloud is an open-source file sharing platform. You host on your own private server or private cloud, giving your full control of your data. ownCloud allows you to sync and store your data, and access it from all of your devices.
+ownCloud is an open-source file sharing platform. You host ownCloud on your own private server or private cloud, giving you full control of your data. ownCloud allows you to sync and store your data, and access it from all of your devices.
 
-In this quickstart we walkthrough setting up an ownCloud server on Ubuntu 18.04, then we'll create a few users, and cover the steps to connect to your ownCloud server.
-
+In this quickstart we walk through setting up ownCloud Community Edition or Ubuntu 18.04, then we create a few users, and last we cover the steps to connect to your ownCloud server.
 
 # Prerequisites
-While ownCloud server can be installed and run on a number of different operating systems, this quickstart specifically uses Ubuntu 18.04. If you're using a different operating system, use this quickstart for general guidance, or as a means to get a server up and running so you can explore the user interface and functionality.
+While ownCloud can be installed and run on a number of different operating systems, this quickstart specifically uses Ubuntu 18.04. If you're using a different operating system, use this quickstart for general guidance, or as a means to get a server up and running so you can explore the user interface and functionality.
 
 To complete the steps in this quickstart you will need to have the following:
 - A user with sudo privileges on your server.
@@ -19,18 +18,18 @@ To complete the steps in this quickstart you will need to have the following:
 
 Once you have completed the prerequisites, read on to get started installing ownCloud.
 
-# Install owncloud
+# Install ownCloud
 Installing ownCloud
-When you're just getting started, the best way to install ownCloud on Ubuntu 18.04 is through the apt package manager. 
+When you're just getting started, the best way to install ownCloud on Ubuntu 18.04 is through the `apt` package manager. 
 
-First, add ownCloud repository key to apt.
+First, add ownCloud repository key to `apt`.
 ```bash
 wget -nv https://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key -O Release.key
 apt-key add - < Release.key
 ```
 >NOTE: If you experience difficulty with any of the commands referenced in this step, check the [ownCloud download page](http://download.owncloud.org/download/repositories/10.0/owncloud/) for the most up to date information.
 
-Next run the following shell commands as root. This adds the repository, then installs ownCloud.
+Next, run the following shell commands as root. This adds the repository, then installs ownCloud.
 ```bash
 echo 'deb http://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/ /' > /etc/apt/sources.list.d/owncloud.list
 apt-get update
@@ -38,6 +37,12 @@ apt-get install owncloud-files
 ```
 
 Our ownCloud files installed to `/var/www/owncloud`. Depending on our web server configuration, we may need to adjust the document root to point to this directory.
+
+# Configure the MySQL Database
+asdf
+
+# Configure ownCloud
+asdf
 
 # Add a user account
 - log in to the web UI as an admin

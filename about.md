@@ -10,13 +10,13 @@ The bullets below capture the steps I followed while working through this writin
 
 * Understand ownCloud
   * Read through the Digital Ocean guide on deploying ownCloud on Ubuntu 16.04
-  * Read through the ownCloud docs (Admin and User guide)
+  * Read through the ownCloud docs (Admin and User manuals)
   * Read through the Digital Ocean guide on deploying ownCloud on Ubuntu 18.04
-  * Watched a YouTube video on adding users to and ownCloud instance
+  * Watched a YouTube video on adding users to an ownCloud instance
 * Practice installing and using ownCloud
   * Followed the DO guide on deploying ownCloud for Ubuntu 16.04
     * I got stuck accessing the site. I suspect the Apache server configuration doesn’t point the url to the ownCloud folder, but I couldn’t resolve this.
-  * Followed the Do guide on deploying ownCloud for Ubuntu 18.04
+  * Followed the DO guide on deploying ownCloud for Ubuntu 18.04
     * This worked for me the first time. I had some trouble connecting to the site using the desktop client, but resolved the issue by changing the user’s password immediately after creation.
 * Write the procedure
   * I used my notes from my research and testing, and drafted the procedure in Google Docs
@@ -30,8 +30,9 @@ The bullets below capture the steps I followed while working through this writin
   * I finished by adding the my procedure to the site, and polishing up things like the copyright date and the theme colors.
 
 # Notes on the content I chose to include/exclude
-I made some de
-ownCloud runs on a number of different platforms
+ownCloud runs on a number of different platforms, but documenting them all was outside the scope of this exercse. As well, the exercise prompts covered different types of usage (administration tasks and user tasks). Because of this, I decided to focuse on one specific OS (Ubuntu 18.04).
+
+ownCloud is also highly customizable. Instead of trying to provide a complete reference of all available options, again I focused on what I deemed to be the easiest path for the user to get up and running with ownCloud. I think if this guide were to serve an audience that wanted to install ownCloud in production, more content on security would need to be added.
 
 # Notes on additional accounts
 To complete this exercise, I set up additional Github and Gmail accounts.
