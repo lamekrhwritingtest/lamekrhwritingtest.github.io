@@ -166,11 +166,11 @@ After connecting, the ownCloud client displays all of the servers you are connec
 
 Test out your server by creating a new test file on your desktop. Be sure to create the file in the folder you are syncing to your ownCloud server.
 
-After creating the file, log into your server from your browser and view the file appear on the **File** tab. 
+After creating the file, log in to your server from your browser and view the file appear on the **File** tab. 
 
 ![Test syncing a file](/assets/owncloudqs-userconnect-testfile.png)
 
 # Conclusion
-This tutorial walked you through setting up an ownCloud instance, creating users, and connecting. From here you should feel comfortable with the basics of ownCloud, and be ready to set up your own instance to manage your data.
+This tutorial walked you through setting up an ownCloud instance, creating a user, and connecting. From here you should feel comfortable with the basics of ownCloud, and be ready to set up your own instance to manage your data.
 
 Check out [ownCloud's documentation](https://owncloud.org/community/documentation/) for more information.
