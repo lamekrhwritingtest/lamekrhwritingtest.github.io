@@ -7,7 +7,7 @@ title: Getting Started with ownCloud
 ---
 ownCloud is an open-source file sharing platform. You host ownCloud on your own private server or private cloud, giving you full control of your data. ownCloud allows you to sync and store your data, and access it from all of your devices.
 
-In this quickstart we walk through setting up ownCloud Community Edition on Ubuntu 18.04, then we create a few users, and last we cover the steps to connect to your ownCloud server.
+In this quickstart we walk through setting up ownCloud Community Edition on Ubuntu 18.04, then we create a new user, and last we cover the steps to connect to your ownCloud server.
 
 # Prerequisites
 While ownCloud can be installed and run on a number of different operating systems, this quickstart specifically uses Ubuntu 18.04. If you are using a different operating system, use this quickstart for general guidance, or as a means to get a server up and running so you can explore the user interface and functionality.
@@ -38,7 +38,8 @@ apt-get install owncloud-files
 ```
 
 Our ownCloud files installed to `/var/www/owncloud`. Depending on our web server configuration, you may need to adjust the document root to point to this directory. Navigate to `/etc/apache2/sites-enabled/` and open your `.conf` file.
-> You might have more than one `.conf` file. In this case you can run the following command to show your parsed vhost settings, and pipe the output to grep to search for your server's domain or IP. This is most likely the case only if you are using an existing Apache setup, or a server that is for shared hosting.
+> You might have more than one `.conf` file. In this case you can run the following command to show your parsed vhost settings, and pipe the output to grep to search for your server's domain or IP. The output will help you locate the correct `.conf` file (or files) to modify.
+>This is most likely the case only if you are using an existing Apache setup, or a server that is for shared hosting.
 >In the following command, replace `server_domain_or_IP` with your server's domain or IP.
 >```sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP```
 
@@ -62,7 +63,7 @@ Second, change the default port from `80` to `8080` in the VirtualHost directive
 <VirtualHost *:8080>
 ```
 
-Next, open your `/etc/apache2/ports.conf` and change the Listen directive to listen on port 8080. We are making this change to avoid any arbitrary restrictions our ISP may impose on the default port 80. Your updated Listen directive will look like this:
+Next, open your `/etc/apache2/ports.conf` file and change the Listen directive to listen on port 8080. We are making this change to avoid any arbitrary restrictions our ISP may impose on the default port 80. Your updated Listen directive will look like this:
 ```
 Listen 8080
 ```
@@ -77,12 +78,12 @@ This completes the ownCloud installation.
 # Configure a MySQL Database
 Next we will set up a MySQL database with the information we need to provide when configuring our new ownCloud instance.
 
-Start by creating a new database. You can name this database anything you would like. In our example, we are naming our database `owncloud`.
+Start by creating a new database. You can name this database anything you would like. In our example, we name our database `owncloud`.
 ```sql
 CREATE DATABASE owncloud;
 ```
 
-Next, create a new MySQL user account to manage the ownCloud database. As with the database, we named our new user `owncloud`. 
+Next, create a new MySQL user account to manage the `owncloud` database you just created. As with the database, we name our new user `owncloud`. 
 > Be sure to replace `new_user_password` with an actual password in the command below.
 
 ```sql
