@@ -94,6 +94,7 @@ When you first install ownCloud you need to take some initial configuration step
 
 First, navigate to your server from your browser.
 > Be sure to replace `server_domain_or_IP` with your actual server domain or IP. Note that we've included `:8080` to reflect the changes we made to our Apache server to listen on port 8080.
+
 ```
 https://server_domain_or_IP:8080
 ```
@@ -101,16 +102,19 @@ https://server_domain_or_IP:8080
 Create your admin user by entering a username and a password.
 img
 
-Leave the *Data folder* field set to `/var/www/owncloud/data`.
+Leave the **Data folder** field set to `/var/www/owncloud/data`.
 
 Enter the details of the MySQL database we configured in the previous section. Use the database name and username you created. Leave the database host as `localhost`.
 img
 
-Fill out the details of the database name, database username, and database password you created in the previous section. If you used the settings from this guide, both the database name and username will be owncloud. Leave the database host as localhost:
+Fill out the details of the database name, database username, and database password you created in the previous section. If you used the settings from this guide, both the database name and username will be owncloud. Leave the database host as localhost.
+img
 
-Click the *Finish setup* button to complete your configuration.
+Click the **Finish setup** button to complete your configuration.
 
 # Add a user account
+
+
 - log in to the web UI as an admin
 - click hamburger menu, select users
 - fill in the user info (note about using a new, non-admin group.)
