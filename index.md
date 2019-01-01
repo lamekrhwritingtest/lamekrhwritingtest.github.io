@@ -20,14 +20,14 @@ Once you have completed the prerequisites, read on to get started installing own
 
 # Install ownCloud
 Installing ownCloud
-When you're just getting started, the best way to install ownCloud on Ubuntu 18.04 is through the `apt` package manager. 
+To install ownCloud on Ubuntu 18.04 we will use the `apt` package manager. 
 
-First, add ownCloud repository key to `apt`.
+First, add the ownCloud repository key to `apt`.
 ```bash
 wget -nv https://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key -O Release.key
 apt-key add - < Release.key
 ```
->NOTE: If you experience difficulty with any of the commands referenced in this step, check the [ownCloud download page](http://download.owncloud.org/download/repositories/10.0/owncloud/) for the most up to date information.
+>If you experience difficulty with any of the commands referenced in this step, check the [ownCloud download page](http://download.owncloud.org/download/repositories/10.0/owncloud/) for the most up to date information.
 
 Next, run the following shell commands as root. This adds the repository, then installs ownCloud.
 ```bash
@@ -36,7 +36,30 @@ apt-get update
 apt-get install owncloud-files
 ```
 
-Our ownCloud files installed to `/var/www/owncloud`. Depending on our web server configuration, we may need to adjust the document root to point to this directory.
+Our ownCloud files installed to `/var/www/owncloud`. Depending on our web server configuration, we may need to adjust the document root to point to this directory. Navigate to `/etc/apache2/sites-enabled/` and open your `.conf` file. Inside this file we will make two changes.
+
+First, change the `DocumentRoot` directive to point to `/var/www/owncloud`.
+```
+<VirtualHost *:80>
+
+    ...
+
+    DocumentRoot /var/www/owncloud
+
+    ...
+
+</VirtualHost>
+```
+
+Second, change the default port from `80` to `8080` in the VirtualHost directive.
+`<VirtualHost *:8080>`
+
+Next, open your `/etc/apache2/ports.conf` and change the `Listen 8080`.
+
+Last, reload Apache to activate these changes by executing the following command.
+`sudo systemctl reload apache2`
+
+This completes the ownCloud installation.
 
 # Configure the MySQL Database
 asdf
