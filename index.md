@@ -99,6 +99,8 @@ First, navigate to your server from your browser.
 https://server_domain_or_IP:8080
 ```
 
+![Adding database information](/assets/owncloudqs-configure-loginpage.png)
+
 Create your admin user by entering a username and a password.
 
 ![Adding an admin username and password](/assets/owncloudqs-configure-username.png)
