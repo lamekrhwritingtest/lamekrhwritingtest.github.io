@@ -19,7 +19,6 @@ To complete the steps in this quickstart you will need to have the following:
 Once you have completed the prerequisites, read on to get started installing ownCloud.
 
 # Install ownCloud
-Installing ownCloud
 To install ownCloud on Ubuntu 18.04 we will use the `apt` package manager. 
 
 First, add the ownCloud repository key to `apt`.
@@ -38,7 +37,7 @@ apt-get install owncloud-files
 
 Our ownCloud files installed to `/var/www/owncloud`. Depending on our web server configuration, we may need to adjust the document root to point to this directory. Navigate to `/etc/apache2/sites-enabled/` and open your `.conf` file. Inside this file we will make two changes.
 
-First, change the `DocumentRoot` directive to point to `/var/www/owncloud`.
+First, change the `DocumentRoot` directive to point to `/var/www/owncloud`. For example, your updated file will look like this: 
 ```
 <VirtualHost *:80>
 
@@ -51,18 +50,42 @@ First, change the `DocumentRoot` directive to point to `/var/www/owncloud`.
 </VirtualHost>
 ```
 
-Second, change the default port from `80` to `8080` in the VirtualHost directive.
-`<VirtualHost *:8080>`
+Second, change the default port from `80` to `8080` in the VirtualHost directive. Your updated file will look like this:
+```
+<VirtualHost *:8080>
+```
 
-Next, open your `/etc/apache2/ports.conf` and change the `Listen 8080`.
+Next, open your `/etc/apache2/ports.conf` and change the Listen directove to listen on port 8080. We're making this change to avoid any arbitrary restrictions our ISP may impose on the default port 80. Your updated file will look like this:
+````
+Listen 8080
+```
 
 Last, reload Apache to activate these changes by executing the following command.
-`sudo systemctl reload apache2`
+```bash
+sudo systemctl reload apache2
+```
 
 This completes the ownCloud installation.
 
 # Configure the MySQL Database
-asdf
+Next we will setup a MySQL database with the information we need to provide when configuring our new ownCloud instance.
+
+Start by creating a new database. You can name this database anything you'd like. In our example, we are naming our database `owncloud`.
+```sql
+CREATE DATABASE owncloud;
+```
+
+Next, create a new MySQL user account to manage the ownCloud database. As with the database, we named our new user `owncloud`. 
+> Be sure to replace `new_user_password` with an actual password in the command below.
+
+GRANT ALL ON owncloud.* to 'owncloud'@'localhost' IDENTIFIED BY 'new_user_password';
+
+Last, activte your changes.
+```sql
+FLUSH PRIVILEGES;
+```
+
+Now your database is setup and you're ready to configure your ownCloud instance.
 
 # Configure ownCloud
 asdf
